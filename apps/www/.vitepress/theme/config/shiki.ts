@@ -13,8 +13,8 @@ export const highlighter = computedAsync<HighlighterCore>(async (onCancel) => {
   const shiki = await createHighlighterCore({
     engine: createJavaScriptRegexEngine(),
     themes: [
-      () => import('shiki/themes/vitesse-dark.mjs'),
-      () => import('shiki/themes/vitesse-light.mjs'),
+      () => import('shiki/themes/dark-plus.mjs'),
+      () => import('shiki/themes/light-plus.mjs'),
     ],
     langs: [
       () => import('shiki/langs/javascript.mjs'),
@@ -34,8 +34,8 @@ export function highlight(code: string, lang: string) {
     lang,
     defaultColor: false,
     themes: {
-      dark: 'vitesse-dark',
-      light: 'vitesse-light',
+      dark: 'dark-plus',
+      light: 'light-plus',
     },
   })
 }
