@@ -10,11 +10,15 @@ import {
 import { computed, type HTMLAttributes } from 'vue'
 
 const props = defineProps<SwitchRootProps & { class?: HTMLAttributes['class'] }>()
+
 const emits = defineEmits<SwitchRootEmits>()
+
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
+
   return delegated
 })
+
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
