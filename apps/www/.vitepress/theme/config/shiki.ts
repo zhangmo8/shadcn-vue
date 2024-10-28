@@ -5,8 +5,8 @@ import { createHighlighterCore } from 'shiki/core'
 import { createJavaScriptRegexEngine } from 'shiki/engine/javascript'
 
 export const shikiThemes: ThemeOptions = {
-  light: 'vitesse-light',
-  dark: 'vitesse-dark',
+  light: 'github-light-default',
+  dark: 'github-dark-default',
 }
 
 export const highlighter = computedAsync<HighlighterCore>(async (onCancel) => {
